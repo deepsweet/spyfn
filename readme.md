@@ -17,21 +17,6 @@ $ yarn add --dev spyfn
 
 ## Usage
 
-### Signature
-
-```ts
-type Props = {
-  index: number,
-  args: any[]
-}
-type Spy = (...args: any[]) => any
-
-const createSpy = (getResult: (props: Props) => any) => any
-const getSpyCalls = (spy: Spy) => any[][]
-```
-
-### Example
-
 ```js
 import { createSpy, getSpyCalls } from 'spyfn'
 
