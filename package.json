@@ -1,6 +1,6 @@
 {
   "name": "spyfn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Spy function",
   "keywords": "spy, tests, calls, args",
   "homepage": "https://github.com/deepsweet/spyfn",
