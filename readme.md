@@ -21,7 +21,7 @@ $ yarn add --dev spyfn
 import { createSpy, getSpyCalls } from 'spyfn'
 
 const spy = createSpy(({ index, args }) => {
-  switch index {
+  switch (index) {
     case 0: {
       return `first call result, args: ${args}`
     }
@@ -40,5 +40,5 @@ console.log(getSpyCalls(spy)) // [['foo'], ['bar']]
 
 console.log(spy('baz')) // 3+ call result, args: ['baz']
 console.log(spy('qux')) // 3+ call result, args: ['qux']
-console.log(getSpyCalls(spy)) // [['foo'], ['bar'], 'baz', 'qux']
+console.log(getSpyCalls(spy)) // [['foo'], ['bar'], ['baz'], ['qux']]
 ```
