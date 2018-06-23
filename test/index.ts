@@ -2,7 +2,7 @@ import test from 'tape'
 
 import { createSpy, getSpyCalls } from '../src/'
 
-test('createSpy', (t) => {
+test('return result', (t) => {
   const spy = createSpy((props) => props)
 
   t.deepEqual(
@@ -20,7 +20,7 @@ test('createSpy', (t) => {
   t.end()
 })
 
-test('getSpyCalls', (t) => {
+test('get calls', (t) => {
   const spy = createSpy(() => {})
 
   spy()
@@ -39,6 +39,28 @@ test('getSpyCalls', (t) => {
     getSpyCalls(spy),
     [[], [1], [1, 2, 3], []],
     'should return an array of call args array, call 2'
+  )
+
+  t.end()
+})
+
+test('throw an error', (t) => {
+  const spy = createSpy(({ index }) => {
+    if (index === 1) {
+      throw new Error()
+    }
+  })
+
+  spy(1)
+
+  try {
+    spy(2)
+  } catch (e) {}
+
+  t.deepEqual(
+    getSpyCalls(spy),
+    [[1], [2]],
+    'should save call args before error occurs'
   )
 
   t.end()

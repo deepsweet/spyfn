@@ -15,12 +15,12 @@ export const createSpy = (getResult: (props: Props) => any) => {
       return calls
     }
 
+    calls.push(args)
+
     const result = getResult({
-      index: calls.length,
+      index: calls.length - 1,
       args
     })
-
-    calls.push(args)
 
     return result
   }
