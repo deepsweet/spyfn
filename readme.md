@@ -6,8 +6,7 @@ Spy function.
 
 ## Requirements
 
-* Node.js >= 6
-* [`esm` loader](https://github.com/standard-things/esm)
+* Node.js >= 8.6.0
 
 ## Install
 
