@@ -1,5 +1,7 @@
 # spyfn
 
+**:warning: Project has been transferred to [Bubble Dev metarepo](https://github.com/bubble-dev/_/tree/master/packages/spyfn)**
+
 [![npm](https://img.shields.io/npm/v/spyfn.svg?style=flat-square)](https://www.npmjs.com/package/spyfn) [![tests](https://img.shields.io/travis/deepsweet/spyfn/master.svg?label=tests&style=flat-square)](https://travis-ci.org/deepsweet/spyfn) [![coverage](https://img.shields.io/codecov/c/github/deepsweet/spyfn.svg?style=flat-square)](https://codecov.io/github/deepsweet/spyfn)
 
 Spy function.
